@@ -1,0 +1,53 @@
+{
+	"schemaVersion": 1,
+	"id": "charcoal-lib",
+	"version": "${version}",
+	"name": "charcoal-lib",
+	"description": "A library mod for CharcoalWhite's mods.",
+	"authors": [
+		{
+			"name": "CharcoalWhite",
+			"contact": {
+				"homepage": "https://github.com/CharcoalWhite"
+			}
+		}
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/charcoal-lib",
+		"sources": "https://github.com/CharcoalWhite/charcoal-lib"
+	},
+	"license": "GNU-GPL-3.0",
+	"icon": "assets/charcoal-lib/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.charcoalwhite.charcoallib.Charcoallib"
+		],
+		"client": [
+			"org.charcoalwhite.charcoallib.CharcoallibClient"
+		]
+	},
+	"mixins": [
+		"charcoal-lib.mixins.json",
+		{
+			"config": "charcoal-lib.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	},
+	"custom": {
+		"loom:injected_interfaces": {
+			"net/minecraft/entity/Entity": ["org/charcoalwhite/charcoallib/api/EntityApi"],
+			"net/minecraft/server/world/ServerWorld": ["org/charcoalwhite/charcoallib/api/ServerWorldApi"]
+		}
+	},
+	"accessWidener" : "charcoal-lib.accesswidener"
+}
