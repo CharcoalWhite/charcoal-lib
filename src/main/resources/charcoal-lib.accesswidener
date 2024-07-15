@@ -63,3 +63,7 @@ accessible method net/minecraft/entity/decoration/DisplayEntity$TextDisplayEntit
 accessible method net/minecraft/entity/decoration/DisplayEntity$TextDisplayEntity getDisplayFlags ()B
 
 accessible method net/minecraft/entity/decoration/DisplayEntity$TextDisplayEntity setDisplayFlags (B)V
+
+accessible method net/minecraft/entity/Entity addPassenger (Lnet/minecraft/entity/Entity;)V
+
+accessible method net/minecraft/entity/Entity removePassenger (Lnet/minecraft/entity/Entity;)V
