@@ -11,19 +11,19 @@ import org.spongepowered.asm.mixin.Mixin;
 public abstract class PlayerEntityMixin implements PlayerEntityApi{
 	@Override
 	public void addPassenger(Entity passenger) {
-		((Entity) (Object)this).addPassenger(passenger);
-		((ServerPlayerEntity) (Object)this).networkHandler.sendPacket(new EntityPassengersSetS2CPacket(((Entity) (Object)this)));
+		((Entity)(Object)this).addPassenger(passenger);
+		((ServerPlayerEntity)(Object)this).networkHandler.sendPacket(new EntityPassengersSetS2CPacket(((Entity)(Object)this)));
 		if (passenger.isPlayer()) {
-			((ServerPlayerEntity)passenger).networkHandler.sendPacket(new EntityPassengersSetS2CPacket(((Entity) (Object)this)));
+			((ServerPlayerEntity)passenger).networkHandler.sendPacket(new EntityPassengersSetS2CPacket(((Entity)(Object)this)));
 		}
 	}
 
 	@Override
 	public void removePassenger(Entity passenger) {
-		((Entity) (Object)this).removePassenger(passenger);
-		((ServerPlayerEntity) (Object)this).networkHandler.sendPacket(new EntityPassengersSetS2CPacket(((Entity) (Object)this)));
+		((Entity)(Object)this).removePassenger(passenger);
+		((ServerPlayerEntity)(Object)this).networkHandler.sendPacket(new EntityPassengersSetS2CPacket(((Entity)(Object)this)));
 		if (passenger.isPlayer()) {
-			((ServerPlayerEntity)passenger).networkHandler.sendPacket(new EntityPassengersSetS2CPacket(((Entity) (Object)this)));
+			((ServerPlayerEntity)passenger).networkHandler.sendPacket(new EntityPassengersSetS2CPacket(((Entity)(Object)this)));
 		}
 	}
 }

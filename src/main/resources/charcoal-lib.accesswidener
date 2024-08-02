@@ -69,3 +69,5 @@ accessible method net/minecraft/entity/Entity addPassenger (Lnet/minecraft/entit
 accessible method net/minecraft/entity/Entity removePassenger (Lnet/minecraft/entity/Entity;)V
 
 accessible method net/minecraft/entity/Entity updatePassengerPosition (Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity$PositionUpdater;)V
+
+accessible method net/minecraft/entity/Entity couldAcceptPassenger ()Z
