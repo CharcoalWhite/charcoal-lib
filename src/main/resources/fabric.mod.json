@@ -36,7 +36,10 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",
-		"minecraft": "~1.21",
+		"minecraft": [
+			"1.21",
+			"1.21.1"
+		],
 		"java": ">=21",
 		"fabric-api": "*"
 	},
@@ -45,10 +48,13 @@
 	},
 	"custom": {
 		"loom:injected_interfaces": {
-			"net/minecraft/entity/Entity": ["org/charcoalwhite/charcoallib/api/EntityApi"],
-			"net/minecraft/entity/player/PlayerEntity": ["org/charcoalwhite/charcoallib/api/PlayerEntityApi"],
-			"net/minecraft/server/world/ServerWorld": ["org/charcoalwhite/charcoallib/api/ServerWorldApi"]
+			"net/minecraft/entity/Entity": [
+				"org/charcoalwhite/charcoallib/api/EntityApi"
+			],
+			"net/minecraft/server/world/ServerWorld": [
+				"org/charcoalwhite/charcoallib/api/ServerWorldApi"
+			]
 		}
 	},
-	"accessWidener" : "charcoal-lib.accesswidener"
+	"accessWidener": "charcoal-lib.accesswidener"
 }
